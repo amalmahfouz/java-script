@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus ...</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <p> You can Enter raduis to get the volume of a sphere...</p>
+    
+        <label for="radius">Radius</label> <br>
+        <input type="text" name="radius" id="radius" required> <br>
+        <label for="volume">Volume</label> <br>
+        <input type="text" name="volume" id="volume" value="0.000"> <br> <br>
+        <input type="button" value="Calculate" onclick="calculate()">
+
+        <script>
+            
+            function calculate(){
+                var r = document.getElementById('radius').value; // value of input raduis
+                var sphere=(4/3)* Math.PI * Math.pow(r, 3);     //volume of sphere = 4/3 π r^3       
+                document.getElementById('volume').value = sphere; // give value to volume input
+            }
+
+        </script>
+    
+</body>
+
+</html>

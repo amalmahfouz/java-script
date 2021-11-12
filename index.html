@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table ...</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <p> Welcome .... <br> You can create table with any #row & #column
+    </p>
+    <table id="table">
+    </table>
+
+    <input type="button" id="button" onclick="createtable()" value="Create Table ..">
+
+    <script>
+        function createtable() {
+            document.getElementById('button').style.visibility = 'hidden'; // to hidden button 'createtable'
+
+            row_num = window.prompt("Enter number of rows", 1); // to show window allow to user input #row
+            col_num = window.prompt("Enter number of columns", 1); // to show window allow to user input #col
+
+            for (var r = 0; r < row_num; r++) {
+                var x = document.getElementById('table').insertRow(r);  //for each row 
+                for (var c = 0; c < col_num; c++) {            
+                    var y = x.insertCell(c);                            // for each col
+                    y.innerHTML = "cell " + r + c;                // just data to be clear !!
+                }
+            }
+            document.getElementById('table').setAttribute('border', '2'); 
+
+
+        }
+    </script>
+
+</body>
+
+</html>

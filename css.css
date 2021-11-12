@@ -1,0 +1,21 @@
+body{
+   background-image: url(1.jpg); 
+    margin: 0;
+    background-size: cover;
+}
+p{
+    color: rgb(29, 25, 25);
+}
+
+#button{
+    border-radius: 30px;
+    height: 30px;
+    width: 140px;
+    margin-left: 6%;
+}
+
+label, input{
+    margin-left: 2%;
+}
+
+
